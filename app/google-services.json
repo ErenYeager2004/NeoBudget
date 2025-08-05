@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "503072941369",
+    "project_id": "neo-budget-369c8",
+    "storage_bucket": "neo-budget-369c8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503072941369:android:4a314a9b104ee5e7b8b4e8",
+        "android_client_info": {
+          "package_name": "com.example.neobudget"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUheVadxrZqZ0H_mT9u6UZtE3cbb4031I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
