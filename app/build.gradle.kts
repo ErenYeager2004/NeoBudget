@@ -55,6 +55,7 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.8.3")
     implementation(libs.firebase.auth)
     implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.androidx.animation.core.lint)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -65,4 +66,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation ("com.google.android.gms:play-services-auth:21.4.0")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.1.1")
+    implementation ("androidx.compose:compose-bom:2023.05.01")
+    implementation ("androidx.compose.material3:material3")
+    implementation ("androidx.compose.material:material-icons-extended")
+
 }

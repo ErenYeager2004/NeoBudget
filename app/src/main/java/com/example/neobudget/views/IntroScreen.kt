@@ -131,6 +131,8 @@ fun IntroScreen(
                     .clickable {
                         navController.navigate("login"){
                             popUpTo("intro") { inclusive = false } // keep intro in the back stack
+                            launchSingleTop = true
+                            restoreState = true
                         }
                     },
                 contentAlignment = Alignment.Center
@@ -144,4 +146,5 @@ fun IntroScreen(
             }
         }
     }
+
 }
