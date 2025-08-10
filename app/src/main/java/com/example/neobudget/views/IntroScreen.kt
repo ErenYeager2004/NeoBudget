@@ -1,5 +1,6 @@
 package com.example.neobudget.views
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInHorizontally
@@ -19,17 +20,18 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.navigation.NavHostController
 import com.example.neobudget.R
 import kotlinx.coroutines.delay
 
 @Composable
-@Preview
 fun IntroScreen(
-    onStartClick: () -> Unit = {}
+    modifier: Modifier,
+    navController: NavHostController,
+    authViewModel: com.example.neobudget.model.AuthViewModel
 ) {
     var showTitle by remember { mutableStateOf(false) }
     var showButton by remember { mutableStateOf(false) }
@@ -126,7 +128,11 @@ fun IntroScreen(
                         color = Color.White.copy(alpha = 0.15f),
                         shape = RoundedCornerShape(14.dp)
                     )
-                    .clickable { onStartClick() },
+                    .clickable {
+                        navController.navigate("login"){
+                            popUpTo("intro") { inclusive = false } // keep intro in the back stack
+                        }
+                    },
                 contentAlignment = Alignment.Center
             ) {
                 Text(
